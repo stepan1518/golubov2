@@ -9,8 +9,14 @@ def show_image(img, im_name='-'):
 img = cv2.imread('photo.jpg')
 img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-img = cv2.GaussianBlur(img, (9, 9), 0)
+img = cv2.GaussianBlur(img, (5, 5), 0)
 # show_image(img)
 
-canny_img = cv2.Canny(img, img.max() * 0.3, img.max() * 0.6)
+canny_img = cv2.Canny(img, img.mean() * 2 / 3, img.mean() * 4 / 3)
+# show_image(canny_img)
+
+max_detection = cv2.Canny(img, 0, 0)
+# show_image(max_detection)
+
+canny_img = cv2.Canny(img, img.mean() * 1.3, img.mean() * 2)
 show_image(canny_img)
