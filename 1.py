@@ -9,7 +9,7 @@ def show_image(img, im_name='-'):
 img = cv2.imread('photo.jpg')
 img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-img = cv2.GaussianBlur(img, (5, 5), 0)
+img = cv2.GaussianBlur(img, (7, 7), 0)
 # show_image(img)
 
 canny_img = cv2.Canny(img, img.mean() * 2 / 3, img.mean() * 4 / 3)
