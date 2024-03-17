@@ -19,4 +19,8 @@ max_detection = cv2.Canny(img, 0, 0)
 # show_image(max_detection)
 
 canny_img = cv2.Canny(img, img.mean() * 1.3, img.mean() * 2)
+<<<<<<< HEAD
 # show_image(canny_img)
+=======
+show_image(canny_img)
+>>>>>>> 7f379d5ea0225cd47a405fc4cf5952d10c8cb027
